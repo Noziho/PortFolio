@@ -1,5 +1,3 @@
-import anime from "animejs";
-
 export function Project (name, thumbnail, prodLink, gitHubLink) {
 
     this.name = name;
