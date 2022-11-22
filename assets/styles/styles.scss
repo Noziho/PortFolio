@@ -58,10 +58,39 @@ header {
   min-height: 40rem;
 }
 
+.homeContainer {
+  @extend %container;
+  min-height: 65rem;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    width: 60%;
+    height: 40rem;
+    background: darken(var.$bg-color, 3%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    div {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
 .project {
   width: 30%;
   height: 40rem;
   border: 1px solid lightgray;
+  transition: 0.1s;
+}
+
+.project:hover {
+  transition: 0.5s;
+  scale: 1.1;
 }
 
 .thumbnailContainer {

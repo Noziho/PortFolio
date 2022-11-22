@@ -1,3 +1,5 @@
+import anime from "animejs";
+
 export function Project (name, thumbnail, prodLink, gitHubLink) {
 
     this.name = name;
@@ -15,8 +17,7 @@ export function Project (name, thumbnail, prodLink, gitHubLink) {
 
         let projectName = document.createElement("h1");
         projectName.innerHTML = this.name;
-
-
+        projectName.classList = "projectTitle"
 
         let projectThumbnailContainer = document.createElement("div");
         projectThumbnailContainer.classList = "thumbnailContainer  margin-top-1";
