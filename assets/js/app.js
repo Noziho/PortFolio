@@ -37,5 +37,5 @@ anime({
 anime({
     targets: '.projectTitle',
     translateX: [-2500, 0],
-    delay: anime.stagger(500, {start: 300}),
+    delay: anime.stagger(400, {start: 300}),
 },);
