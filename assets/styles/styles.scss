@@ -1,0 +1,5 @@
+@use "modules/var";
+
+body {
+  background: var.$test-color;
+}
