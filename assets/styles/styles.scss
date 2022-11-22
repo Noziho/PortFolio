@@ -1,5 +1,75 @@
+@use "utils/utils";
 @use "modules/var";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background: var.$test-color;
+  background: var.$bg-color;
+  font-size: 1.6rem;
+  color: var.$text-color;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  height: 6rem;
+
+  h1 {
+    font-size: var.$fs-title;
+    font-weight: lighter;
+  }
+
+  nav {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+* a {
+  text-decoration: none;
+  color: var.$text-color;
+}
+
+%container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  @extend %container;
+}
+
+.projectContainer {
+  @extend %container;
+  align-items: center;
+  min-height: 40rem;
+}
+
+.project {
+  width: 30%;
+  height: 40rem;
+  border: 1px solid lightgray;
+}
+
+.thumbnailContainer {
+  display: flex;
+  width: 100%;
+}
+
+.projectThumbnail {
+  max-width: 100%;
+  max-height: 20rem;
 }
