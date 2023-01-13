@@ -12,7 +12,7 @@ import Typed from 'typed.js';
 
 let options = {
     strings: ['About me.'],
-    typeSpeed: 60
+    typeSpeed: 90
 };
 
 let typed = new Typed('#title', options);
