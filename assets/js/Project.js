@@ -9,7 +9,9 @@ export function Project (name, thumbnail, prodLink, gitHubLink) {
 
     this.setProject = function () {
         let containerProject = document.createElement("div");
+        containerProject.setAttribute('data-aos', 'fade-up');
         containerProject.classList = "project padding-2 margin-inline-2 margin-top-4";
+
 
         let projectNameContainer = document.createElement("div");
 

@@ -3,13 +3,20 @@ import {Project} from "./Project";
 import gameSiteThumbnails from '../img/gameSiteThumbnail.png';
 import '/assets/img/Noziho.png';
 import '/assets/img/Noziho-transformed.png'
-import anime from 'animejs/lib/anime.es.js';
 
-anime({
-    targets: '.homeContainer',
-    scale: [0, 1],
-    duration: 1500,
-},);
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
+import Typed from 'typed.js';
+
+let options = {
+    strings: ['About me.'],
+    typeSpeed: 60
+};
+
+let typed = new Typed('#title', options);
+
 
 const test1 = new Project('GameSite', gameSiteThumbnails, 'https://gamesite.noziho.com', 'https://github.com/Noziho/gameSite');
 test1.setProject();
@@ -29,9 +36,18 @@ test5.setProject();
 const test6 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
 test6.setProject();
 
+/**
+let i = 0;
+let text = "About me";
+let speed = 100;
 
-anime({
-    targets: '.project',
-    translateX: [-2500, 0],
-    delay: anime.stagger(100, {start: 100}),
-},);
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("title").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
+**/
