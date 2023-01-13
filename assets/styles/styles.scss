@@ -1,6 +1,17 @@
 @use "utils/utils";
 @use "modules/var";
 
+@font-face {
+  font-family: 'Garet';
+  src: url('../styles/font/Garet/Garet-Book.otf');
+  src:
+    url('../styles/font/Garet/Garet-Book.ttf') format('embedded-opentype'),
+    url('../styles/font/Garet/Garet-Heavy.otf') format('otf'),
+    url('../styles/font/Garet/Garet-Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +26,21 @@ body {
   background: var.$bg-color;
   font-size: 1.6rem;
   color: var.$text-color;
+  font-family: 'Garet', serif;
+}
+
+h1, h2, h3 {
+  color: var.$title-color;
 }
 
 header {
   width: 100%;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.30);
   justify-content: space-between;
-  height: 6rem;
+  height: 10rem;
+  background: var.$bg-color;
 
   h1 {
     font-size: var.$fs-title;
@@ -58,28 +75,37 @@ header {
   min-height: 40rem;
 }
 
-.homeContainer {
-  @extend %container;
-  min-height: 65rem;
-  align-items: center;
-  justify-content: center;
-
-  div {
-    width: 60%;
-    height: 40rem;
-    background: darken(var.$bg-color, 3%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-
-    div {
-      width: 100%;
-      height: auto;
-    }
-  }
+#myLogo {
+  width: 9rem;
+  height: 9rem;
 }
 
+.fa-circle-arrow-down {
+  cursor: pointer;
+}
+
+.spacer {
+  width: 100%;
+  min-height: 80vh;
+  padding: 5rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.spacerContent {
+  width: 100%;
+  min-height: 50vh;
+}
+
+#myProjects {
+  width: 100%;
+  min-height: 20vh;
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
 
 .project {
   width: 30%;

@@ -1,6 +1,8 @@
 import '../styles/styles.scss';
 import {Project} from "./Project";
 import gameSiteThumbnails from '../img/gameSiteThumbnail.png';
+import '/assets/img/Noziho.png';
+import '/assets/img/Noziho-transformed.png'
 import anime from 'animejs/lib/anime.es.js';
 
 anime({
@@ -32,10 +34,4 @@ anime({
     targets: '.project',
     translateX: [-2500, 0],
     delay: anime.stagger(100, {start: 100}),
-},);
-
-anime({
-    targets: '.projectTitle',
-    translateX: [-2500, 0],
-    delay: anime.stagger(400, {start: 300}),
 },);
