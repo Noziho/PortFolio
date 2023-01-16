@@ -25,7 +25,7 @@ html {
 body {
   background: var.$bg-color;
   font-size: 1.6rem;
-  color: var.$text-color;
+  color: lighten(var.$text-color, 10%);
   font-family: 'Garet', serif;
 }
 
@@ -42,21 +42,19 @@ header {
   height: 10rem;
   background: var.$bg-color;
 
-  h1 {
-    font-size: var.$fs-title;
-    font-weight: lighter;
+  a {
+    color: var.$title-color;
   }
-
-  nav {
-    width: 40%;
-    display: flex;
-    flex-flow: row wrap;
+  div {
+    a {
+      margin-inline: 1rem;
+    }
   }
 }
 
 * a {
   text-decoration: none;
-  color: var.$text-color;
+  color: lighten(var.$text-color, 10%);
 }
 
 %container {
@@ -136,6 +134,43 @@ footer {
 
   div > div {
     margin-top: 0.5rem;
+  }
+}
+
+form {
+  width: 100%;
+  padding: 1rem;
+  min-height: 55rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
+    label {
+      width: 100%;
+    }
+    input {
+      padding: 1rem;
+      border: none;
+      width: 100%;
+      background: #2e3136;
+      color: lighten(var.$text-color, 50%);
+    }
+
+    input:focus {
+      outline: 1px solid var.$title-color;
+    }
+
+    input[type="submit"] {
+      padding: 1rem;
+      border: none;
+      background: #ff7300;
+      color: white;
+    }
   }
 }
 

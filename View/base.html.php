@@ -10,10 +10,19 @@
 </head>
 <body>
 <header class="padding-1">
-    <a href=""><img id="myLogo" src="/build/img/Noziho-transformed.png" alt="Noziho Logo"></a>
+    <a href="http://localhost:8000"><img id="myLogo" src="/build/img/Noziho-transformed.png" alt="Noziho Logo"></a>
+    <?php
+    if (isset($_SESSION['su_admin'])) { ?>
+        <div id="adminMenu">
+            <a href="/?c=admin&a=addProject">Ajout de projet</a>
+            <a href="/?c=admin&a=logout">Se déconnecter</a>
+        </div>
+        <?php
+    }
+    ?>
 </header>
 
-    <?= $html ?>
+<?= $html ?>
 
 <footer data-aos="fade-up">
     <div class="contactInformation">

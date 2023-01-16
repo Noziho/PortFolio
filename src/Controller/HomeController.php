@@ -4,7 +4,7 @@ namespace App\Controller;
 class HomeController extends AbstractController
 {
 
-    public function index()
+    public static function index()
     {
         self::render('home/home');
     }
