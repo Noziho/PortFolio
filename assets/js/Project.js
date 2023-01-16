@@ -35,6 +35,7 @@ export function Project (name, thumbnail, prodLink, gitHubLink) {
         let projectProdLink = document.createElement("a");
         projectProdLink.innerHTML = "Lien de production"
         projectProdLink.href = this.prodLink;
+        projectProdLink.target = "_blank";
         projectProdLink.add
 
 
@@ -44,6 +45,7 @@ export function Project (name, thumbnail, prodLink, gitHubLink) {
 
         let projectGitHubLink = document.createElement("a");
         projectGitHubLink.innerHTML = "GitHub link";
+        projectGitHubLink.target = "_blank";
         projectGitHubLink.href = this.gitHubLink;
 
 

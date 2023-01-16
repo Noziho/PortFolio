@@ -21,33 +21,17 @@ let typed = new Typed('#title', options);
 const test1 = new Project('GameSite', gameSiteThumbnails, 'https://gamesite.noziho.com', 'https://github.com/Noziho/gameSite');
 test1.setProject();
 
-const test2 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
+const test2 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
 test2.setProject();
 
-const test3 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
+const test3 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
 test3.setProject();
 
-const test4 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
+const test4 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
 test4.setProject();
 
-const test5 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
+const test5 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
 test5.setProject();
 
-const test6 = new Project('test', 'tete', 'https://google.fr', 'https://moodle.up-to.fr/course/view.php?id=17&sectionid=814');
+const test6 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
 test6.setProject();
-
-/**
-let i = 0;
-let text = "About me";
-let speed = 100;
-
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("title").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-typeWriter();
-**/
