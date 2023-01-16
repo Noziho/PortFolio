@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controller;
+use RedBeanPHP\R;
+
 Abstract class AbstractController
 {
     abstract public static function index();
@@ -25,6 +27,21 @@ Abstract class AbstractController
             if (!isset($_POST[$name]) || empty($_POST[$name])) {
                 return false;
             }
+        }
+        return true;
+    }
+
+    public static function userExist(int $id): bool
+    {
+        if (null === $id) {
+            header("Location: /?c=home");
+            exit;
+        }
+
+        $user = R::findOne('ndmp22suadmin', 'id=?', [$id]);
+
+        if (!$user) {
+            return false;
         }
         return true;
     }

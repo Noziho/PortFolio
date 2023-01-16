@@ -1,4 +1,4 @@
-<form action="/?c=admin&a=addProject" method="post">
+<form action="/?c=project&a=addProject" method="post">
     <div>
         <label for="titleProject">Titre:</label>
         <input type="text" id="tittleProject" name="titleProject">

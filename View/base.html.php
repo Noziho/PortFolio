@@ -14,7 +14,7 @@
     <?php
     if (isset($_SESSION['su_admin'])) { ?>
         <div id="adminMenu">
-            <a href="/?c=admin&a=addProject">Ajout de projet</a>
+            <a href="/?c=project&a=addProject">Ajout de projet</a>
             <a href="/?c=admin&a=logout">Se déconnecter</a>
         </div>
         <?php
