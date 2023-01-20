@@ -1,3 +1,14 @@
+<?php
+if (isset($_SESSION['error'])) {?>
+    <div class="error"><?= $_SESSION['error'] ?></div><?php
+    unset($_SESSION['error']);
+}
+if (isset($_SESSION['success'])) {?>
+    <div class="success"><?= $_SESSION['success'] ?></div><?php
+    unset($_SESSION['success']);
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,15 +17,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Noziho | Web developer</title>
-    <link rel="icon" href="/build/img/Noziho.png">
+    <link rel="icon" href="/img/Noziho.png">
 </head>
 <body>
 <header class="padding-1">
-    <a href="http://localhost:8000"><img id="myLogo" src="/build/img/Noziho-transformed.png" alt="Noziho Logo"></a>
+    <a href="http://localhost:8000"><img id="myLogo" src="/img/Noziho-transformed.png" alt="Noziho Logo"></a>
     <?php
     if (isset($_SESSION['su_admin'])) { ?>
         <div id="adminMenu">
-            <a href="/?c=project&a=addProject">Ajout de projet</a>
+            <a href="/?c=project">Ajout de projet</a>
             <a href="/?c=admin&a=logout">Se déconnecter</a>
         </div>
         <?php

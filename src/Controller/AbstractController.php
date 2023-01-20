@@ -45,4 +45,15 @@ Abstract class AbstractController
         }
         return true;
     }
+
+    public static function checkMimeType($tmpname): bool
+    {
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mtype = finfo_file($finfo, $tmpname);
+        if (str_starts_with($mtype, 'image/')) {
+            return true;
+        }
+        finfo_close($finfo);
+        return false;
+    }
 }

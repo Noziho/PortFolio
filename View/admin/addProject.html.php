@@ -1,12 +1,12 @@
-<form action="/?c=project&a=addProject" method="post">
+<form action="/?c=project&a=addProject" method="post" enctype="multipart/form-data">
     <div>
         <label for="titleProject">Titre:</label>
         <input type="text" id="tittleProject" name="titleProject">
     </div>
 
     <div>
-        <label for="img">Miniature:</label>
-        <input type="file" id="img" name="img">
+        <label for="projectImg">Miniature:</label>
+        <input type="file" id="projectImg" name="projectImg">
     </div>
 
     <div>

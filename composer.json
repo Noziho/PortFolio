@@ -8,6 +8,8 @@
     },
     "require": {
         "symfony/error-handler": "^6.2",
-        "gabordemooij/redbean": "^5.7"
+        "gabordemooij/redbean": "^5.7",
+      "ext-openssl": "*",
+        "ext-fileinfo": "*"
     }
 }

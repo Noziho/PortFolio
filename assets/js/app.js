@@ -1,11 +1,7 @@
 import '../styles/styles.scss';
-import {Project} from "./Project";
-import gameSiteThumbnails from '../img/gameSiteThumbnail.png';
-import '/assets/img/Noziho.png';
-import '/assets/img/Noziho-transformed.png'
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 AOS.init();
 
 import Typed from 'typed.js';
@@ -17,21 +13,26 @@ let options = {
 
 let typed = new Typed('#title', options);
 
+const success = document.querySelector('.success');
+const error = document.querySelector('.error');
+const addLinksButton = document.querySelector('#addLinks');
 
-const test1 = new Project('GameSite', gameSiteThumbnails, 'https://gamesite.noziho.com', 'https://github.com/Noziho/gameSite');
-test1.setProject();
+if (success) {
+    setTimeout(() => {
+        success.remove();
+    }, 3000);
 
-const test2 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
-test2.setProject();
+    success.addEventListener("click",() => {
+        success.remove();
+    })
+}
 
-const test3 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
-test3.setProject();
+if (error) {
+    setTimeout(() => {
+        error.remove();
+    }, 3000)
 
-const test4 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
-test4.setProject();
-
-const test5 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
-test5.setProject();
-
-const test6 = new Project('test', 'tete', 'https://google.fr', 'https://google.fr');
-test6.setProject();
+    error.addEventListener("click",() => {
+        error.remove();
+    })
+}
