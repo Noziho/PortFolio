@@ -40,8 +40,8 @@ class ProjectController extends AbstractController
 
 
         if (isset($_POST['submit'])) {
-            if (!self::formIsset('titleProject')) {
-                $_SESSION['error'] = "Un champ est manquant.";
+            if (!self::formIsset('titleProject', 'prodLink', 'githubLink')) {
+                $_SESSION['error'] = "Un ou plusieurs champ sont manquant.";
                 header("Location: /?c=home");
                 exit();
             }
@@ -49,11 +49,19 @@ class ProjectController extends AbstractController
             if (isset($_FILES['projectImg'])) {
 
                 $title = filter_var($_POST['titleProject'], FILTER_SANITIZE_STRING);
+                $prodLink = filter_var($_POST['prodLink'], FILTER_SANITIZE_STRING);
+                $githubLink = filter_var($_POST['githubLink'], FILTER_SANITIZE_STRING);
+
                 $project = R::dispense('ndmp22project');
-                $project->title = filter_var($_POST['titleProject'], FILTER_SANITIZE_STRING);
+                $project->title = $title;
+                $project->prod_link = $prodLink;
+                $project->github_link = $githubLink;
 
                 if ($_FILES['projectImg']['name'] === '') {
+
                     $project->title = $title;
+                    $project->prod_link = $prodLink;
+                    $project->github_link = $githubLink;
                     $project->project_img = "defaultImage";
                     $project->img_extension = "jpg";
 
@@ -78,6 +86,8 @@ class ProjectController extends AbstractController
                         $infos = pathinfo($_FILES['projectImg']['name']);
 
                         $project->title = $title;
+                        $project->prod_link = $prodLink;
+                        $project->github_link = $githubLink;
                         $project->project_img = $sanitize_img_name;
                         $project->img_extension = $infos['extension'];
 
