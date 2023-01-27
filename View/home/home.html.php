@@ -34,6 +34,9 @@
                             <div class="margin-top-1">
                                 <a href="<?= $project->githubLink ?>" target="_blank">Lien GitHub</a>
                             </div>
+
+                            <button><a href="/?c=admin&a=deleteProject&id=<?= $project->id ?>">Delete</a></button>
+                            <button><a href="/?c=admin&a=editProject&id=<?= $project->id ?>">Edit</a></button>
                         </div>
                     </div><?php
                 }
