@@ -188,6 +188,38 @@ form {
   cursor: pointer;
 }
 
+#edit_delete_container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.add_delete_button {
+  margin-inline: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background: var.$title-color;
+  min-width: 10rem;
+  a {
+    color: black
+  }
+}
+
+
+#cursor {
+  width: 6px;
+  height: 35px;
+  background-color: lighten(var.$text-color, 10%);
+  position: relative;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .success {
   @extend .error;
   background: #4f805d;

@@ -1,3 +1,14 @@
+<?php
+
+use App\Controller\AdminController;
+
+if (isset($_SESSION['su_admin'])) {
+    if (!AdminController::userExist($_SESSION['su_admin']->id)) {
+        header("Location: /?c=home");
+        exit();
+    }
+}
+?>
 <form action="/?c=project&a=addProject" method="post" enctype="multipart/form-data">
     <div>
         <label for="titleProject">Titre:</label>

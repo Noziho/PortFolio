@@ -1,13 +1,13 @@
 <?php
 
 use App\Controller\AdminController;
+
 if (isset($_SESSION['su_admin'])) {
     if (!AdminController::userExist($_SESSION['su_admin']->id)) {
         header("Location: /?c=home");
         exit();
     }
 }
-
 ?>
 
 <form action="/?c=admin&a=login" method="post">

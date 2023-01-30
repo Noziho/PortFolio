@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use RedBeanPHP\R;
-use RedBeanPHP\RedException\SQL;
 
 class AdminController extends AbstractController
 {
@@ -13,9 +12,7 @@ class AdminController extends AbstractController
         self::render('admin/admin');
     }
 
-    /**
-     * @throws SQL
-     */
+
 
     public static function login()
     {
@@ -28,16 +25,19 @@ class AdminController extends AbstractController
             $user = R::findOne('ndmp22suadmin', 'name=?', [$username]);
 
             if (!$user) {
-                header("Location: /?c=home");
+                $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
+                header("Location: /?c=admin&a=login");
                 exit;
             }
 
             if (!password_verify($password, $user->password)) {
-                self::index();
+                $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
+                header("Location: /?c=admin&a=login");
                 exit;
             }
 
             $_SESSION['su_admin'] = $user;
+            $_SESSION['success'] = "Connecté avec succès";
             header("Location: /?c=home");
 
         }
@@ -46,6 +46,7 @@ class AdminController extends AbstractController
     public static function logout()
     {
         session_destroy();
+        $_SESSION['success'] = "Déconnecté avec succès";
         header("Location: /?c=home");
     }
 
@@ -56,6 +57,10 @@ class AdminController extends AbstractController
             exit();
         }
 
+        if(!self::userExist($_SESSION["su_admin"]->id)) {
+            header("Location: /?c=home");
+            exit();
+        }
         $project = R::findOne('ndmp22project', 'id=?', [$id]);
 
         if (!$project) {
@@ -72,6 +77,11 @@ class AdminController extends AbstractController
     public static function editProject (int $id = null)
     {
         if (null === $id) {
+            header("Location: /?c=home");
+            exit();
+        }
+
+        if(!self::userExist($_SESSION["su_admin"]->id)) {
             header("Location: /?c=home");
             exit();
         }
@@ -106,8 +116,6 @@ class AdminController extends AbstractController
                     $project->title = $title;
                     $project->prod_link = $prodLink;
                     $project->github_link = $githubLink;
-                    $project->project_img = "defaultImage";
-                    $project->img_extension = "jpg";
 
                     R::store($project);
 

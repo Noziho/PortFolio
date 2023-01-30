@@ -56,4 +56,13 @@ Abstract class AbstractController
         finfo_close($finfo);
         return false;
     }
+
+    public static function loggedAdmin(): void
+    {
+
+        if (!isset($_SESSION['su_admin'])) {
+            header("Location: /?c=home");
+        }
+
+    }
 }

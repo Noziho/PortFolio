@@ -1,8 +1,17 @@
 <?php
+
+use App\Controller\AdminController;
+
 if (isset($data['project'])) {
     $project = $data['project'];
 }
 
+if (isset($_SESSION['su_admin'])) {
+    if (!AdminController::userExist($_SESSION['su_admin']->id)) {
+        header("Location: /?c=home");
+        exit();
+    }
+}
 ?>
 
 <form action="/?c=admin&a=editProject&id=<?= $project->id?>" method="post" enctype="multipart/form-data">

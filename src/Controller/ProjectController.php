@@ -103,7 +103,9 @@ class ProjectController extends AbstractController
                     }
                 }
             } else {
-                dd("SAMRCHPA");
+                $_SESSION['error'] = "Le champ file est manquant";
+                header("Location :/?c=home");
+                exit();
             }
         }
     }

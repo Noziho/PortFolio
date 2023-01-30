@@ -1,6 +1,7 @@
 <div class="container">
     <div class="spacer">
         <h1 id="title"></h1>
+        <div id="cursor"></div>
         <div class="spacerContent">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -35,8 +36,15 @@
                                 <a href="<?= $project->githubLink ?>" target="_blank">Lien GitHub</a>
                             </div>
 
-                            <button><a href="/?c=admin&a=deleteProject&id=<?= $project->id ?>">Delete</a></button>
-                            <button><a href="/?c=admin&a=editProject&id=<?= $project->id ?>">Edit</a></button>
+                            <?php
+                                if (isset($_SESSION['su_admin'])) {?>
+                                        <div id="edit_delete_container">
+                                            <button class="add_delete_button"><a href="/?c=admin&a=deleteProject&id=<?= $project->id ?>">Delete</a></button>
+                                            <button class="add_delete_button"><a href="/?c=admin&a=editProject&id=<?= $project->id ?>">Edit</a></button>
+                                        </div><?php
+                                }
+                            ?>
+
                         </div>
                     </div><?php
                 }
