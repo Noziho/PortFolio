@@ -1,14 +1,37 @@
 <div class="container">
     <div class="spacer">
-        <h1 id="title"></h1>
-        <div id="cursor"></div>
-        <div class="spacerContent">
+
+        <div class="presentation">
+            <h1 id="title"></h1>
+            <div id="cursor"></div>
             <div id="personalInformation">
                     <p>Nom: <span class="info">Decroix</span></p>
                     <p>Prénom: <span class="info">Noah</span></p>
                     <p>Âge: <span class="info">20</span></p>
                     <p>Passion: <span class="info">Dév web, nouvelles tech, jeux vidéos</span></p>
             </div>
+            <div id="skills">
+                <div id="frontSkills">
+                    <h2 class="info">Front: </h2>
+                    <p>HTML</p>
+                    <p>CSS/SCSS</p>
+                    <p>JavaScript/TypeScript/Jquery</p>
+                    <p>Webpack/NPM</p>
+                </div>
+
+                <div id="backSkills">
+                    <h2 class="info">Back: </h2>
+                    <p>PHP</p>
+                    <p>SQL</p>
+                    <p>Symfony</p>
+                    <p>Utilisations d'ORM, RedBean, Doctrine</p>
+                    <p>Composer</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="intro">
+            <h3>Faut mettre un truc mais quoi ?</h3>
         </div>
 
         <div id="myProjects">
