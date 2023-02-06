@@ -17,7 +17,7 @@ if (isset($_SESSION['su_admin'])) {
 <form action="/?c=admin&a=editProject&id=<?= $project->id?>" method="post" enctype="multipart/form-data">
     <div>
         <label for="titleProject">Titre:</label>
-        <input type="text" id="tittleProject" name="titleProject" value="<?= $project->title ?>">
+        <input type="text" id="titleProject" name="titleProject" value="<?= $project->title ?>">
     </div>
 
     <div>

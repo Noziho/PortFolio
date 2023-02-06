@@ -70,7 +70,7 @@ class AdminController extends AbstractController
         }
 
         R::trash($project);
-        $_SESSION['success'] = "Le projet $id à été supprimé avec succès";
+        $_SESSION['success'] = "Le projet $project->title à été supprimé avec succès";
         header("Location: /?c=home");
     }
 
@@ -145,7 +145,7 @@ class AdminController extends AbstractController
 
                         R::store($project);
 
-                        $_SESSION['success'] = "Ajout validé.";
+                        $_SESSION['success'] = "Modification du projet validé.";
                         header("Location: /?c=home");
                     }
                     else {

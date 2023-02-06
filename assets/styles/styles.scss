@@ -95,6 +95,13 @@ header {
 .spacerContent {
   width: 100%;
   min-height: 50vh;
+  div {
+    padding: 5rem;
+
+    .info {
+      color: darken(#ff7300, 10%);
+    }
+  }
 }
 
 #myProjects {

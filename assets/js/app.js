@@ -2,15 +2,13 @@ import '../styles/styles.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 const success = document.querySelector('.success');
 const error = document.querySelector('.error');
-const addLinksButton = document.querySelector('#addLinks');
 
 AOS.init();
 
 if (document.querySelector('#title')) {
-    const text = "About me.";
+    const text = "À propos de moi.";
     const textContainer = document.querySelector("#title");
     let index = 0;
 

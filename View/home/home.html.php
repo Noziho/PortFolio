@@ -3,11 +3,12 @@
         <h1 id="title"></h1>
         <div id="cursor"></div>
         <div class="spacerContent">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                A amet aperiam autem culpa dolorem ducimus exercitationem expedita fugiat illo, iusto officia optio
-                possimus quam, quidem ratione totam vel veritatis, vitae.
-            </p>
+            <div id="personalInformation">
+                    <p>Nom: <span class="info">Decroix</span></p>
+                    <p>Prénom: <span class="info">Noah</span></p>
+                    <p>Âge: <span class="info">20</span></p>
+                    <p>Passion: <span class="info">Dév web, nouvelles tech, jeux vidéos</span></p>
+            </div>
         </div>
 
         <div id="myProjects">
