@@ -1,6 +1,5 @@
 <div class="container">
     <div class="spacer">
-
         <div class="presentation">
             <h1 id="title"></h1>
             <div id="cursor"></div>
@@ -11,8 +10,9 @@
                     <p>Passion: <span class="info">Dév web, nouvelles tech, jeux vidéos</span></p>
             </div>
             <div id="skills">
+                <h3>Compétences: </h3>
                 <div id="frontSkills">
-                    <h2 class="info">Front: </h2>
+                    <h3 class="info">Front: </h3>
                     <p>HTML</p>
                     <p>CSS/SCSS</p>
                     <p>JavaScript/TypeScript/Jquery</p>
@@ -20,18 +20,19 @@
                 </div>
 
                 <div id="backSkills">
-                    <h2 class="info">Back: </h2>
+                    <h3 class="info">Back: </h3>
                     <p>PHP</p>
                     <p>SQL</p>
                     <p>Symfony</p>
                     <p>Utilisations d'ORM, RedBean, Doctrine</p>
                     <p>Composer</p>
                 </div>
-
             </div>
         </div>
         <div id="intro">
-            <h3>Faut mettre un truc mais quoi ?</h3>
+            <h2>Recherche :</h2>
+            <p>Je suis actuellement à la recherche d'un stage d'une durée de 3 mois du x au X dans l'objectif de validé ma formation CDA (concepteur développeur d'application).</p>
+            <p>Le projet effectué en stage ou l'un des projets effectué sera le sujet de mon oral de fin d'année permettant de validé ma formation et l'obtention du diplôme.</p>
         </div>
 
         <div id="myProjects">
@@ -43,7 +44,6 @@
         <?php
             if (isset($data['projects'])) {
                 $projects = $data ['projects'];
-
                 foreach ($projects as $project) {?>
                     <div class="project padding-2 margin-inline-2 margin-top-4" data-aos="fade-up">
                         <div>
@@ -59,7 +59,6 @@
                             <div class="margin-top-1">
                                 <a href="<?= $project->githubLink ?>" target="_blank">Lien GitHub</a>
                             </div>
-
                             <?php
                                 if (isset($_SESSION['su_admin'])) {?>
                                         <div id="edit_delete_container">
@@ -68,7 +67,6 @@
                                         </div><?php
                                 }
                             ?>
-
                         </div>
                     </div><?php
                 }
