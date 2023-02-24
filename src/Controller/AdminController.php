@@ -155,7 +155,10 @@ class AdminController extends AbstractController
                     }
                 }
             } else {
-                dd("SAMRCHPA");
+                $_SESSION['error'] = "Un champ est manquant";
+                header("Location: /?c=home");
+                exit;
+
             }
         }
         else {
