@@ -31,7 +31,7 @@
         </div>
         <div id="intro">
             <h2>Recherche :</h2>
-            <p>Je suis actuellement à la recherche d'un stage d'une durée de 3 mois du x au X dans l'objectif de validé ma formation CDA (concepteur développeur d'application).</p>
+            <p>Je suis actuellement à la recherche d'un stage d'une durée de 3 mois du 9 Mai au 28 Juillet dans l'objectif de validé ma formation CDA (concepteur développeur d'application).</p>
             <p>Le projet effectué en stage ou l'un des projets effectué sera le sujet de mon oral de fin d'année permettant de validé ma formation et l'obtention du diplôme.</p>
         </div>
 

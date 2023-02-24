@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use RedBeanPHP\R;
+use RedBeanPHP\RedException\SQL;
 
 class AdminController extends AbstractController
 {
@@ -74,6 +75,9 @@ class AdminController extends AbstractController
         header("Location: /?c=home");
     }
 
+    /**
+     * @throws SQL
+     */
     public static function editProject (int $id = null)
     {
         if (null === $id) {
