@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Garet';
+    src: url('../styles/font/Garet/Garet-Book.otf');
+    src: url('../styles/font/Garet/Garet-Book.ttf') format('embedded-opentype'),
+    url('../styles/font/Garet/Garet-Heavy.otf') format('otf'),
+    url('../styles/font/Garet/Garet-Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #191919;
+    color: #383838;
+    font-size: 1.6rem;
+    font-family: 'Garet', serif;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
