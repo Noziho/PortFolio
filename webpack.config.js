@@ -63,7 +63,7 @@ Encore
     .enableReactPreset()
     .autoProvideVariables({
         React: 'react',
-        ReactDOM: 'react-dom'
+        ReactDOM: 'react-dom/client'
     })
 
     // uncomment to get integrity="..." attributes on your script & link tags
