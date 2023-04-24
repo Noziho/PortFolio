@@ -1,0 +1,51 @@
+.spacer {
+    width: 100%;
+    min-height: 80vh;
+    padding: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#title {
+    width: 100%;
+}
+
+.presentation {
+    width: 40%;
+    min-height: 50vh;
+}
+
+.presentation > div {
+    width: 100%;
+}
+
+#personalInformation, #skills {
+    padding: 5rem;
+}
+
+.info, #intro > h2, #title {
+    color: #ff7300;
+
+}
+
+#personalInformation {
+    padding-top: 1rem;
+}
+
+#skills {
+    padding-top: 0;
+}
+
+#backSkills {
+    margin-top: 2rem;
+}
+
+#intro {
+    width: 50%;
+}
+
+
+
+
+
