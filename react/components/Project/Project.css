@@ -1,0 +1,22 @@
+.project {
+    width: 30%;
+    min-height: 40rem;
+    max-height: 40rem;
+    border: 1px solid #333333;
+    padding: 2rem;
+    margin: 2rem;
+
+}
+
+.thumbnail {
+    width: 90%;
+    height: 20rem;
+}
+
+.linkContainer {
+    margin-top: 1rem;
+}
+
+.linkContainer > a {
+    display: block;
+}
