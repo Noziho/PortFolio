@@ -19,4 +19,9 @@
 
 .linkContainer > a {
     display: block;
+    margin-top: 1rem;
+}
+
+.thumbnailContainer {
+    margin-top: 1rem;
 }

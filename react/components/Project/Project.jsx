@@ -4,9 +4,10 @@ export const Project = function ({project}) {
     return (
         <div className={'project'}>
             <div>
-                <h1>{project.name}</h1>
+                <h1>{project.name.toUpperCase()}</h1>
             </div>
-            <div>
+
+            <div className={'thumbnailContainer'}>
                 <img className={"thumbnail"} src={"/uploads/" + project.image} alt="projectImage"/>
             </div>
 
