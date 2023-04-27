@@ -3,5 +3,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 4rem;
+
+}
+
+.projectsTitle {
+    margin-left: 4.5rem;
+    margin-top: 12rem;
 }

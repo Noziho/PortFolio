@@ -45,6 +45,13 @@
     width: 50%;
 }
 
+#myProjects {
+    font-size: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 

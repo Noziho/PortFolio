@@ -2,7 +2,7 @@ import './Project.css';
 import {Link} from "react-router-dom";
 export const Project = function ({project}) {
     return (
-        <div className={'project'}>
+        <div className={'project'} data-aos="fade-up">
             <div>
                 <h1>{project.name.toUpperCase()}</h1>
             </div>

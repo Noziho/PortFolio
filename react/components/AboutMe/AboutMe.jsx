@@ -1,5 +1,6 @@
 import './AboutMe.css'
 import {useEffect} from "react";
+import {RiArrowDownCircleFill} from "react-icons/ri";
 
 export const AboutMe = function () {
 
@@ -56,7 +57,7 @@ export const AboutMe = function () {
             </div>
 
             <div id="myProjects">
-                <a href=""><i className="fa-solid fa-circle-arrow-down"></i></a>
+                <a href="#projectTitle"><RiArrowDownCircleFill /></a>
             </div>
         </div>
     )
