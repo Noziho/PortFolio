@@ -23,13 +23,20 @@ class ProjectCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('name'),
-            TextField::new('description'),
+            TextField::new('description')
+                ->setRequired(false)
+            ,
             ImageField::new('image')
                 ->setUploadDir('/public/uploads')
-                ->setRequired('false')
-                ->setUploadedFileNamePattern('[contenthash].[extension]'),
-            TextField::new('github_link'),
-            TextField::new('prod_link'),
+                ->setRequired(false)
+                ->setUploadedFileNamePattern('[contenthash].[extension]')
+            ,
+            TextField::new('github_link')
+                ->setRequired(false)
+            ,
+            TextField::new('prod_link')
+                ->setRequired(false)
+            ,
 
         ];
     }
